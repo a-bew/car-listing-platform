@@ -1,0 +1,86 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Car Listing Platform</title>
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<!-- font-awesome icons -->
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<link href="//fonts.googleapis.com/css?family=Alegreya:400,400i,700,700i,900,900i&subset=latin-ext" rel="stylesheet">
+		<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+	<nav id="myTopnav" class="top-nav padding-to-right">
+           <li data-menu="buy" class="serv- fr"><img class = 'serv' src="./images/logo.PNG" alt"Car listing Platform Logo"></li>
+
+           <li data-menu="buy" class="service-"><a href="/">Buy a car</a></li>
+           <li class="service-" data-menu="sell-a-car"><a href="/create.html">Sell a car</a></li>
+   
+<li data-menu="search"><a class="set-to-white fc searches-" id="search-listing" href="#search"><i class="fa fa-search-plus" aria-hidden="true"></i></a></li>
+
+
+
+           <li data-menu="home" class="contact fr"><a href="#">Contact</a></li>	           
+		
+
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+	</nav>
+		<div class="clear-fix"></div>
+		<div class="container"> 
+		    <main> 
+		        <section class="wrapper" id="home-main">
+		        	<h1>Car Listing</h1>
+		        	<div class="api-content">
+						<h2 class="as-margin-bottom">Register</h2>
+
+						<form name="register" action="#" method="post">
+						<p class="reg"><input class="padding-left-5" type="text" id="username" name="username" placeholder="Username"/></p>
+						<p class="reg"><input class="padding-left-5" type="email" id="email" name="email" placeholder = "Email"/></p>
+						<p class="reg"><input class="padding-left-5" type="password" id="password" name="password" placeholder="Password"/></p>
+						<p class="reg"><input class="padding-left-5" type="confirmpassword" id="confirmpassword" name="confirmpassword" placeholder="Confirm your Password"/></p>
+						<button class="btn btn-primary">Submit</button>
+						<p>ALREADY REGISTER, <a href="./login.html">Login</a> 
+							Unable to Login <a href="/">REMEMBER your password</a></p>
+
+			        </div>
+		        </section>
+		    </main>
+		<div class="clear-fix"></div>
+
+		</div>
+	    <footer>
+	       <p>©2019 Car Listing Platform - Decagon MiniProject</p>
+	       <p><span class="visit-us">Visit Us:</span> decagon.institute</p>
+	       <p><span class="powered-by">Powered By</span> Decagon</p>
+	       <p><span class="hosted"> Designed by:</span> Adetola Bewaji</p>
+	       <p><span class="v-c">Version Controlled on:</span> https://www.github.com/a-bew/car-listing-platform</p>
+	       <p><span class="hosted-by">Hosted By:</span> Heroku(In view)</p>
+	    </footer>
+	    <script src='/js/jquery.min.js'></script>
+	    <script src='/js/global.js'></script>
+	</body>
+
+	<script> 
+
+	//window.onload = populateTable;
+
+
+	/// Introduce register form
+	function registerBuyer(){
+		var form = "";
+		form += '<form name="register" action="#" method="post">'
+		form += '<h2 class="as-margin-bottom">Buy</h2>'
+		form += '<p class="reg"><input class="padding-left-5" type="text" id="username" name="username" placeholder="Username"/></p>'
+		form += '<p class="reg"><input class="padding-left-5" type="email" id="email" name="email" placeholder = "Email"/></p>' 
+		form += '<p class="reg"><input class="padding-left-5" type="password" id="password" name="password" placeholder="Password"/></p>'
+		form += '<p class="reg"><input class="padding-left-5" type="confirmpassword" id="confirmpassword" name="confirmpassword" placeholder="Confirm your Password"/></p>'
+		form += '<button class="btn btn-primary">Submit</button>'
+		form += '<p>ALREADY REGISTER, <a href="">Login</a></p> <p>Unable to Login <a href="#remember-password">REMEMBER your password</a></p>'
+		return $('main section#home-main div.api-content').html(form);
+	}
+
+	</script>
+	</html>
