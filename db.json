@@ -1,0 +1,40 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "name": "Mazda",
+      "make": "Japan",
+      "modelId": "2018",
+      "productionYr": "2018",
+      "img": "./images/7.jpg",
+      "Price": "850,000"
+    },
+    {
+      "id": 2,
+      "name": "Yamaha",
+      "make": "Japan",
+      "modelId": "092fs",
+      "productionYr": "2017",
+      "img": "./images/big-data.jpg",
+      "Price": "1.5million"
+    },
+    {
+      "id": 3,
+      "name": "Dehoo",
+      "make": "USA",
+      "modelId": "x2019",
+      "productionYr": "2019",
+      "img": "./images/connect.jpg",
+      "Price": "2.5 million"
+    },
+    {
+      "name": "Camry",
+      "make": "USA",
+      "modelId": "2018",
+      "productionYr": "2018",
+      "img": "./images/connect.jpg",
+      "Price": "1.5Million",
+      "id": 4
+    }
+  ]
+}
