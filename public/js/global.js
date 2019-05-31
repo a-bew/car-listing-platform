@@ -1,10 +1,9 @@
 // DOM Ready =============================================================
 
-window.onload=utilityglobal();
-
-function utilityglobal(){
-	updateMenu()
-}
+//window.onload=updateMenu()
+  // Show nav2 on initial page load
+  //getData();
+;
 
 function updateMenu(){
     var menus = document.querySelectorAll("a"); 
@@ -29,7 +28,7 @@ function updateMenu(){
 			}
 
             event.preventDefault()
-//			selectMenuUpdate(menuClicked);
+			selectMenuUpdate(menuClicked);
    		
   	    })
     }
@@ -37,7 +36,7 @@ function updateMenu(){
 }
 
 function selectMenuUpdate(menuItem){
-  var menus = {"register": registerBuyer(),
+  var menus = {//"register": registerBuyer(),
     "login": logBuyer(),
     "buy": function(){}, 
   	"sell": function(){},
@@ -50,11 +49,9 @@ function selectMenuUpdate(menuItem){
    	  i = allMenus.indexOf(menuItem)
 	  console.log(menuItem[i][menuItem])
 	  result = menuItem[i][menuItem];
-	  if (result){
-	  	return result;
-	  }
-	  return  	
+      return result;
   } finally {
+	  return  	
 
   }
   
