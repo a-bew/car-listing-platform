@@ -46,13 +46,13 @@
       "id": 5
     },
     {
-      "name": "Cadillac ATS",
+      "name": "Cadillac--ATS",
       "make": "China",
       "modelId": "x2017",
       "productionYr": "2017",
       "img": "./images/6.jpg",
-      "Price": "1.5Million",
-      "id": 6
+      "Price": "3Million",
+      "id": 7
     }
   ]
 }
