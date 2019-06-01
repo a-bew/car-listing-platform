@@ -51,7 +51,6 @@ var populateCreateTable = function( data ) {
 
 var delayEditBtn = function(){
 	$('#createCarList table tbody').on('click', 'td a.linkedituser', showUserInfoComplete);
-
 }
 
 var showCreate = function(){
@@ -72,7 +71,6 @@ var showCreate = function(){
 function showUserInfoComplete(event){
   // Prevent Link from Firing
   event.preventDefault();
-
   // Retrieve username from link rel attribute
 //  console.log("rel", this.rel)
   var thisId = this.rel;
@@ -163,7 +161,6 @@ function editCar(event){
     	}
     }
 
-    console.log(newUser);
     var data = JSON.stringify(newUser)
 
     http_request.send(data);
@@ -190,6 +187,16 @@ function userValidation2(){
 
 
 // Add User
+
+function validateInput(input){
+  // using regex to strip and replace white space i.e replace ' ' with '--'
+  var re = /\s+/;   //select one or more ' '/space character
+
+  return input.replace(re, function(matchingText){
+  	return '--'
+  })
+}
+
 function addCar(event) {
   event.preventDefault();
 
@@ -197,16 +204,16 @@ function addCar(event) {
   var errorCount = carValidation();
 
   // Check and make sure errorCount's still at zero
-  if(errorCount === 0) {
+  if(errorCount === 0) {    
 
-    // If it is, compile all user info into one object
+    // If it is, compile all car info into one object
     var newUser = {
-      'name': document.querySelector('input#name-of-car').value,
-      'make': document.querySelector('input#make-of-car').value,
-      'modelId': document.querySelector('input#model-of-car').value,
-      'productionYr': document.querySelector('input#yr-of-production-of-car').value,
-      'img': document.querySelector('input#img-link').value,
-      'Price': document.querySelector('input#price-of-car').value
+      'name': validateInput(document.querySelector('input#name-of-car').value),
+      'make': validateInput(document.querySelector('input#make-of-car').value),
+      'modelId': validateInput(document.querySelector('input#model-of-car').value),
+      'productionYr': validateInput(document.querySelector('input#yr-of-production-of-car').value),
+      'img': validateInput(document.querySelector('input#img-link').value),
+      'Price': validateInput(document.querySelector('input#price-of-car').value)
     }
 
     // Use AJAX to post the object to our adduser service
