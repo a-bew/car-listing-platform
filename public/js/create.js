@@ -13,7 +13,42 @@ function utilityFunctionC(){
   // Add User button click
   document.querySelector('#btnCreateCar').addEventListener('click', addCar);
 
+
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+//  setup();
 }
+
+
+// const get = document.getElementById.bind(document);
+// const query = document.querySelector.bind(document);	
+
+// function setup() {  
+//   let modalRoot = get('modal-root');
+//   let button = get('modal-opener');
+//   let modal = query('.modal');
+  
+//   modalRoot.addEventListener('click', rootClick);
+//   button.addEventListener('click', openModal);
+//   modal.addEventListener('click', modalClick);
+// }
+
+// function rootClick() {
+//   let modalRoot = get('modal-root');
+//     modalRoot.classList.remove('visible');
+// }
+  
+//   function openModal() {
+//   let modalRoot = get('modal-root');
+//     modalRoot.classList.add('visible');
+//   }
+  
+//   function modalClick(e) {
+//     e.preventDefault();
+//     e.stopPropagation();
+//     e.stopImmediatePropagation();
+//     return false;
+//   }
 
 var populateCreateTable = function( data ) {
   // Empty content string
@@ -330,74 +365,76 @@ function showUserInfo(event) {
   // Prevent Link from Firing
   event.preventDefault();
 
-  // Retrieve username from link rel attribute
-//  console.log("rel", this.rel)
+  // Retrieve id from link rel attribute
   var thisUserName = this.rel;
 
-
-  var m1 = $(makeModal(thisUserName));
-//	document.body.insertAdjacentHTML('beforeend', m1);
-  m1.modal('show');
+   makeModal(thisUserName);
 };
 
-//document.querySelector('td a.linkshowuser').addEventListener('click', showUserInfo, false)
 
 
 function makeModal(thisId){
 	  // Get Index of object based on id value
   var arrayPosition = userListData.findIndex(x => x.id === parseInt(thisId)) // map(function(arrayItem) { return arrayItem._id; }).indexOf(thisId);
-
-//  var arrayPosition = userListData.map(function(arrayItem) { return arrayItem.username; }).indexOf(thisUserName);
-  // Get our User Object
   var thisUserObject = userListData[arrayPosition];
-   console.log(thisId, arrayPosition, userListData)
-  //Populate Info Box
-//  document.querySelector('#userInfoName').textContent= thisUserObject.fullname;
-//  document.querySelector('#userInfoAge').textContent = thisUserObject.age;
-//  document.querySelector('#userInfoGender').textContent = thisUserObject.gender;
-//  document.querySelector('#userInfoLocation').textContent = thisUserObject.location;
+//  console.log(thisId, arrayPosition, userListData)
+   var span = document.getElementsByClassName("close")[0];
 
-//	return `<div id="largemodal" class="modal" role="dialog" tabindex="-1" role="dialog" aria-labelledby='largemodal' aria-hidden-"true">
-//    <div class = "modal-dialog model-lg">
-//	    <!-- Modal content -->
-//	    <div class="modal-content">
-//	      <div class = "modal-header">
-//	        <button type="button" class="btn btn-default" data-dismiss="modal">&times;</button>
-//	        <h4 class="modal-title" id="myModalLabel">Modal Header</h4>
-//	      </div>
-//	      <div class = "modal-body">
-//	        <img src=${this.img}>
-//	        <p><span class="visit-us">Name:</span> ${thisUserObject.name}</p>
-//	        <p><span class="visit-us">Make:</span> ${thisUserObject.make}</p>
-//	        <p><span class="visit-us">ModelId:</span> ${thisUserObject.modelId}</p>
-//	        <p><span class="visit-us">Production Year:</span> ${thisUserObject.productionYr}</p>
-//	        <p><span class="visit-us">Price:</span> ${thisUserObject.Price}</p>       
-//	      </div>
-//	    </div>
+  openModal(thisUserObject);
+  var modal = document.getElementById("myModal");
+  var keepOpen = document.getElementById("keepOpen");
+  var span = document.getElementsByClassName("close")[0];
 
-//	     </div>
-  //  </div>`;
-  return `<div id="designModal" class="modal fade" role="dialog" tabindex="-1" role="dialog" aria-labelledby='largemodal' aria-hidden-"true">
+  modal.addEventListener('click', rootClick);
+  span.addEventListener('click', closeSpanBtn);
+  keepOpen.addEventListener('click', modalClick);
+}
 
-<div className=""container>
-  <div className="row">
-    <div id="modal" className="col-8 mx-auto col-md-6 col-lg-4 
-       text-center text-centralize">
-       <h5> item added to the cart</h5>
-       <img src="" className="img-fluid" alt="product"/>
-       <h5>"Title"</h5>
-       <h5 className = "text-mute">"price: N {price}" </h5>
-       <Button onClick="">Shop</Button>
-	    <a href="/cart">
-	     <Button onClick = "">
-	      go to Cart
-	     
-	     </Button/>  
-	    </a>    
-    </div>
-  </div>
-  </div>
-  </div>`
- }
+function openModal(table) {
+  var modal = document.getElementById("myModal");
+  var white = document.getElementById("white");
+  // var captionText = document.getElementById("caption");
+  modal.style.display = "block";
+  white.style.backgroundColor = 'white';
+  // var g = document.querySelector('#myModal div.modal-content');
+   $('#myModal div.modal-content').html(modalShowCarInfoCreated(table));
+  // captionText.innerHTML = "Hi there";
+}
 
+function rootClick() {
+  var modal = document.getElementById("myModal");
+  //modalRoot.classList.remove('visible');
+  modal.style.display = "none";
+}
 
+function closeSpanBtn(){
+  var modal = document.getElementById("myModal");
+  modal.style.display = "none";
+}  
+
+function modalClick(e) {
+	e.preventDefault();
+	e.stopPropagation();
+	e.stopImmediatePropagation();
+	return false;
+}
+
+function modalShowCarInfoCreated(table){
+  var content = "";
+    content += '<h2>Car Info</h2>';
+    content += '<div class="floatCarInModalLeft">';
+   content += '<img src="'+table.img+'" alt="'+table.name+'" width="30px" heigth="30px">'
+    content += '</div>'
+    content += '<div id="carInfo" class="floatCarInfoInModalRight">';
+
+    content +='<p >'; 
+    content += '<strong>Name of Car:</strong><span class = "carInfoName">'+table.name+'</span><br>';
+    content += '<strong>Make of Car:</strong><span class = "carInfoMake">'+ table.make+'</span><br>';
+    content += '<strong>Model of Car:</strong><span class = "carInfoModel">'+table.modelId+'</span><br>';
+    content += '<strong>Year of Car Production:</strong><span class = "carInfoYrOfProduction">'+table.productionYr+'</span><br>';
+    content += '<strong>Url Link of Car:</strong><span class = "carInfoUrl">'+table.img+'</span><br>';
+    content +='<strong>Price of Create Car:</strong><span class = "carInfoPrice">'+table.Price+'</span><br>';    
+    content +='</p>';
+    content += '</div>';
+  return content;
+}
