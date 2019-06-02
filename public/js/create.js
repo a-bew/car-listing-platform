@@ -436,5 +436,6 @@ function modalShowCarInfoCreated(table){
     content +='<strong>Price of Create Car:</strong><span class = "carInfoPrice">'+table.Price+'</span><br>';    
     content +='</p>';
     content += '</div>';
+    content += '<button class="btn btn-info btn-block clear-fix container btn-width" onclick="closeSpanBtn(this)">Close</button>'
   return content;
 }
