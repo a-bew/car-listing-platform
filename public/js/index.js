@@ -155,7 +155,6 @@ function modalShowCarInfoOnSales(table){
 
 function linkToOrder(event){
    event.preventDefault()
-   closeSpanBtn();
    id = this.rel;
    //console.log("------------",id)
 
