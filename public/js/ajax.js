@@ -41,7 +41,8 @@ function populateApp(dataSet, apiEndpoint){
     		// document.getElementById('Country').textContent = jsonObj.country;
     		console.log(".....................er")
     		http_request.status === 200 ? console.log(http_request.responseText) : console.error('error')
-    	    dataSet(eval(http_request.responseText))
+//    	    dataSet(eval(http_request.responseText))
+            dataSet(jsonObj);
     	}
     } 
 
