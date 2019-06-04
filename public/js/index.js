@@ -5,9 +5,6 @@ function utilityFunction(){
     populateApp(indexPage, "http://localhost:3000/cars")
 }
 
-var makeReadable = function( readable ){
-  return readable.trim().replace("--", " ")
-}
 
 var indexPage = function( data ) {
     // Empty content string
@@ -63,9 +60,12 @@ function showCarInfoIndex(event) {
   event.preventDefault();
 
   // Retrieve id from link rel attribute
-  var thisUserName = this.rel;
+  var id = this.rel;
   console.log(this.rel)
 //   makeModal(thisUserName);
+   row = resolveItem(userListData, id);
+   window.localStorage.setItem("productId", row.id);
+   window.location.href = "/product.html?description:product_name=" + String(row.name)+"&"+"product_id=" + String(row.id);
 };
 
 $('main section#home-main div.api-content').on('click', 'article a.show-car-info-modal', cartModal);
@@ -138,7 +138,7 @@ function modalClick(e) {
 function modalShowCarInfoOnSales(table){
   var content = "";
       content += '<article class="padding-to-30 set-modal">';
-      content += '<a href="#" class="show-car-info-index"><img src="'+ table.img +'" alt="'+makeReadable(table.name)+'"></a>';      
+      content += '<a href="#" class=""><img src="'+ table.img +'" alt='+makeReadable(table.name)+'></a>';      
       content += '<a class="show-car-info-modal0">on Sale</a>';
       content += '<p><span>' +makeReadable(table.name)+ '</span>'+ " N"+ makeReadable(table.Price)+ '</p></article>'
       content += '<div class="clear-fix"></div>'

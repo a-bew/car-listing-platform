@@ -5,6 +5,11 @@
   //getData();
 ;
 
+var makeReadable = function( readable ){
+  return readable.trim().replace("--", " ")
+}
+
+
 function updateMenu(){
     var menus = document.querySelectorAll("a"); 
     var menuClicked = "";
