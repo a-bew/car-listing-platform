@@ -15,7 +15,7 @@ var indexPage = function( data ) {
     userListData = data;
     var dataLength = data.length
     var isEven = function(){
-    	return dataLength%2 == 0
+    	return dataLength%2 == 0;
     }
     // For each item in our JSON, add a table row and cells to the content string
     index = 0
@@ -159,6 +159,8 @@ function linkToOrder(event){
    id = this.rel;
    //console.log("------------",id)
 
-   item = resolveItem(userListData, id)
-   window.location.href = "/order.html?product_name=" + String(item.name)+"&"+"product_id=" + String(item.id);
+   row = resolveItem(userListData, id);
+   window.localStorage.setItem("productId", row.id);
+   window.location.href = "/order.html?product_name=" + String(row.name)+"&"+"product_id=" + String(row.id);
+   
 }
