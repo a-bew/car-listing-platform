@@ -270,7 +270,7 @@ section{
 img{
     display: flex;
    	width: 100%;
-   	height: 50vh;
+   	height: 60vh;
    	flex: 0 1 60vw;
 
    	margin: 0;
@@ -578,4 +578,88 @@ a.show-car-info-modal0{
 	right: 30px;
 	bottom: 0px;
 	text-decoration: none;
+}
+
+/* Find a Car */
+form.grid{
+	width: 50%;
+	margin: auto;	
+    font-size: 1.5em;
+}
+
+form.grid select{
+	width: 100%;
+	height: 50px;
+}
+
+form.grid button{
+  padding: 0.6em;
+  border: 2px solid #000;
+}
+
+.grid{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.grid-buttom{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+
+
+/*slider section*/
+
+
+.slider-section {
+  box-sizing: border-box;
+  color: rgb(103, 103, 103);
+  display: block;
+  font-family: Rubik, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  height: 300px;
+  position: relative;
+  padding-top: 0px;
+  
+  
+  text-align: center;
+  text-size-adjust: 100%;
+  width: 100%;
+}
+
+#slider_container {
+	width: 100%;
+}
+
+#slider_container > img {
+	width: 100%;
+}
+
+/*.ctrl {
+	margin-right: 0px
+}
+*/
+.ctrl img{
+	width: 30px;
+	height: 30px;;
+	position: absolute;
+	z-index: 10;
+	top:50%;
+}
+
+.ctrl img:first-child {
+	left: 0px;
+}
+
+.ctrl img:last-child {
+	right: 0px;
+}
+
+.ctrl img:hover {
+	background: #000000;
+	border-radius: 100%;
+	transition: 0.4s;
+	cursor: pointer;
 }
