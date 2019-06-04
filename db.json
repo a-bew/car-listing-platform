@@ -1,13 +1,13 @@
 {
   "cars": [
     {
-      "id": 1,
       "name": "Mazda",
-      "make": "Japan",
+      "make": "S/Korea",
       "modelId": "2018",
       "productionYr": "2018",
       "img": "./images/1.jpg",
-      "Price": "850,000"
+      "Price": "850,000",
+      "id": 1
     },
     {
       "name": "Jeep Renegade",
