@@ -13,34 +13,42 @@
 </head>
 <body>
 	<nav id="myTopnav" class="top-nav padding-to-left">
-           <li data-menu="buy" class="serv- fr"><a href="/"><img class = 'serv' src="./images/logo.PNG" alt"Car listing Platform Logo"></a></li>
-
-           <li data-menu="buy" class="service-"><a href="/">Buy a car</a></li>
-           <li class="service-" data-menu="sell-a-car"><a href="./order.html">Sell a car</a></li>
-   
-<li data-menu="search"><a class="set-to-white fc searches-" href="/findacar.html"><i class="fa fa-search-plus" aria-hidden="true"></i></a></li>
-
-
-
-           <li data-menu="home" class="contact fr"><a href="#">Contact</a></li>	           
-		
-
-
+       <li data-menu="buy" class="serv- fr .moveup">
+          <a href="/">
+          	<img class = 'serv-nav' src="./images/logo.PNG" alt="Car listing Platform Logo">
+           	</a>
+        </li>
+<li data-menu="search"><a class="set-to-white fc moveup" href="/findacar.html"><i class="fa fa-search-plus" aria-hidden="true"></i></a></li>
+           <li data-menu="home" class="contact moveup top fr"><a href="#">Contact</a></li>	           
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 	</nav>
 	<div class="clear-fix"></div>
-	<div class="container"> 
+	<div class="container">
 	    <main> 
 	        <section class="wrapper" id="home-main">
-	        	<h1>Car Listing</h1>
+	        	<div class="login-intro">
+                    <img src="./images/logo.PNG" alt="Car listing platform">
+	            	<h3>Car for listing</h3>
+	            	<p>Create/sell a car on this platform.</p> 
+	            	<p>Provide veritable details about your propose car for sales</p>
+	            	<p>Register and login to get STARTED.</p> 
+	                 <p>Fill out our verify car details form </p>
+	            	<p>Connect now</p>
+	            	<p>Sell and Buy</p>
+	            </div>
 	        	<div class="api-content">
 					<form name="register" action="#" method="post">
 					<h2 class="as-margin-bottom">Login</h2>
-					<p class="reg"><input class="padding-left-5" type="text" id="username" name="username" placeholder="Username"/></p>
-					<p class="reg"><input class="padding-left-5" type="email" id="email" name="email" placeholder = "Email"/></p>
+					<p class="reg"><input class="padding-left-5" type="text" id="username" name="username" placeholder="Username or email"/></p>
 					<p class="reg"><input class="padding-left-5" type="password" id="password" name="password" placeholder="Password"/></p>
-					<button class="btn btn-primary">Submit</button>
-					<p>NOT A MEMBER, <a href="/register.html">Register</a>Already Registered<a href="./login">PLEASE Login</a></p>
+					
+					<button class="btn btn-primary btn-block">Submit</button><br>
+					
+					<p>NOT A MEMBER, <a href="/register.html">Register Here</a></p> 
+<!-- 					<p>Already Registered<a href="./login">PLEASE Login</a></p>
+ -->				
+					
+				</form>
 		        </div>
 	        </section>
 	    </main>
