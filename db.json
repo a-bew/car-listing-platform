@@ -2,7 +2,7 @@
   "cars": [
     {
       "name": "Mazda",
-      "make": "S/Korea",
+      "make": "USA",
       "modelId": "2018",
       "productionYr": "2018",
       "img": "./images/1.jpg",
@@ -55,72 +55,270 @@
       "id": 7
     }
   ],
-  "make":[
-    {"id": 1, "name": "Acura"}, 
-    {"id": 2, "name": "Audi"},
-    {"id": 3, "name": "Bajaj"},
-    {"id": 4, "name": "BAW"},
-    {"id": 5, "name": "Bentley"},
-    {"id": 6, "name": "BMW"},
-    {"id": 7, "name": "Cadillac"},
-    {"id": 8, "name": "Caterpillar"},
-    {"id": 9, "name": "CHANGAN"},
-    {"id": 10, "name": "Chavrolet"},
-    {"id": 11, "name": "Chrysler"},
-    {"id": 12, "name": "Citroen"},
-    {"id": 13, "name": "DAF"},
-    {"id": 14, "name": "Daihatsu"},
-    {"id": 15, "name": "Dodge"},
-    {"id": 16, "name": "Ferari"},
-    {"id": 17, "name": "Fiat"},
-    {"id": 18, "name": "Ford"},
-    {"id": 19, "name": "GMC"},
-    {"id": 20, "name": "Honda"},
-    {"id": 21, "name": "Hummer"},
-    {"id": 22, "name": "Hyundai"},
-    {"id": 23, "name": "Infiniti"},
-    {"id": 24, "name": "Infinity"},
-    {"id": 25, "name": "IVECO"},
-    {"id": 26, "name": "IVM"},
-    {"id": 27, "name": "Jaguar"},
-    {"id": 28, "name": "Jeep"},
-    {"id": 29, "name": "Kia"},
-    {"id": 30, "name": "Kym stone"},
-    {"id": 31, "name": "Lamborghini"},
-    {"id": 32, "name": "Land Rover"},
-    {"id": 33, "name": "Lexus"},
-    {"id": 34, "name": "Lincoln"},
-    {"id": 35, "name": "Mack"},
-    {"id": 36, "name": "Man"},
-    {"id": 37, "name": "Mars"},
-    {"id": 38, "name": "Maserati"},
-    {"id": 39, "name": "Mazda"},
-    {"id": 40, "name": "Mercedes-Benz"},
-    {"id": 41, "name": "MG"},
-    {"id": 42, "name": "Mini"},
-    {"id": 43, "name": "Mitsubishi"},
-    {"id": 44, "name": "Nissan"},
-    {"id": 45, "name": "Opel"},
-    {"id": 46, "name": "Peogeot"},
-    {"id": 47, "name": "Polaris"},
-    {"id": 48, "name": "Pontiac"},
-    {"id": 49, "name": "Porsche"},
-    {"id": 50, "name": "Renault"},
-    {"id": 51, "name": "Rolls Royce"},
-    {"id": 52, "name": "Rover"},
-    {"id": 53, "name": "Shineray"},
-    {"id": 54, "name": "Sinoki Supra"},
-    {"id": 55, "name": "Skoda"},
-    {"id": 56, "name": "Subaru"},
-    {"id": 57, "name": "Suzuki"},
-    {"id": 58, "name": "Tata"},
-    {"id": 59, "name": "Toyota"},
-    {"id": 60, "name": "Vauxhall"},
-    {"id": 61, "name": "Volkswagon"},
-    {"id": 62, "name": "Volvo"}
+  "make": [
+    {
+      "id": 1,
+      "name": "Acura"
+    },
+    {
+      "id": 2,
+      "name": "Audi"
+    },
+    {
+      "id": 3,
+      "name": "Bajaj"
+    },
+    {
+      "id": 4,
+      "name": "BAW"
+    },
+    {
+      "id": 5,
+      "name": "Bentley"
+    },
+    {
+      "id": 6,
+      "name": "BMW"
+    },
+    {
+      "id": 7,
+      "name": "Cadillac"
+    },
+    {
+      "id": 8,
+      "name": "Caterpillar"
+    },
+    {
+      "id": 9,
+      "name": "CHANGAN"
+    },
+    {
+      "id": 10,
+      "name": "Chavrolet"
+    },
+    {
+      "id": 11,
+      "name": "Chrysler"
+    },
+    {
+      "id": 12,
+      "name": "Citroen"
+    },
+    {
+      "id": 13,
+      "name": "DAF"
+    },
+    {
+      "id": 14,
+      "name": "Daihatsu"
+    },
+    {
+      "id": 15,
+      "name": "Dodge"
+    },
+    {
+      "id": 16,
+      "name": "Ferari"
+    },
+    {
+      "id": 17,
+      "name": "Fiat"
+    },
+    {
+      "id": 18,
+      "name": "Ford"
+    },
+    {
+      "id": 19,
+      "name": "GMC"
+    },
+    {
+      "id": 20,
+      "name": "Honda"
+    },
+    {
+      "id": 21,
+      "name": "Hummer"
+    },
+    {
+      "id": 22,
+      "name": "Hyundai"
+    },
+    {
+      "id": 23,
+      "name": "Infiniti"
+    },
+    {
+      "id": 24,
+      "name": "Infinity"
+    },
+    {
+      "id": 25,
+      "name": "IVECO"
+    },
+    {
+      "id": 26,
+      "name": "IVM"
+    },
+    {
+      "id": 27,
+      "name": "Jaguar"
+    },
+    {
+      "id": 28,
+      "name": "Jeep"
+    },
+    {
+      "id": 29,
+      "name": "Kia"
+    },
+    {
+      "id": 30,
+      "name": "Kym stone"
+    },
+    {
+      "id": 31,
+      "name": "Lamborghini"
+    },
+    {
+      "id": 32,
+      "name": "Land Rover"
+    },
+    {
+      "id": 33,
+      "name": "Lexus"
+    },
+    {
+      "id": 34,
+      "name": "Lincoln"
+    },
+    {
+      "id": 35,
+      "name": "Mack"
+    },
+    {
+      "id": 36,
+      "name": "Man"
+    },
+    {
+      "id": 37,
+      "name": "Mars"
+    },
+    {
+      "id": 38,
+      "name": "Maserati"
+    },
+    {
+      "id": 39,
+      "name": "Mazda"
+    },
+    {
+      "id": 40,
+      "name": "Mercedes-Benz"
+    },
+    {
+      "id": 41,
+      "name": "MG"
+    },
+    {
+      "id": 42,
+      "name": "Mini"
+    },
+    {
+      "id": 43,
+      "name": "Mitsubishi"
+    },
+    {
+      "id": 44,
+      "name": "Nissan"
+    },
+    {
+      "id": 45,
+      "name": "Opel"
+    },
+    {
+      "id": 46,
+      "name": "Peogeot"
+    },
+    {
+      "id": 47,
+      "name": "Polaris"
+    },
+    {
+      "id": 48,
+      "name": "Pontiac"
+    },
+    {
+      "id": 49,
+      "name": "Porsche"
+    },
+    {
+      "id": 50,
+      "name": "Renault"
+    },
+    {
+      "id": 51,
+      "name": "Rolls Royce"
+    },
+    {
+      "id": 52,
+      "name": "Rover"
+    },
+    {
+      "id": 53,
+      "name": "Shineray"
+    },
+    {
+      "id": 54,
+      "name": "Sinoki Supra"
+    },
+    {
+      "id": 55,
+      "name": "Skoda"
+    },
+    {
+      "id": 56,
+      "name": "Subaru"
+    },
+    {
+      "id": 57,
+      "name": "Suzuki"
+    },
+    {
+      "id": 58,
+      "name": "Tata"
+    },
+    {
+      "id": 59,
+      "name": "Toyota"
+    },
+    {
+      "id": 60,
+      "name": "Vauxhall"
+    },
+    {
+      "id": 61,
+      "name": "Volkswagon"
+    },
+    {
+      "id": 62,
+      "name": "Volvo"
+    }
   ],
-  "year":
-     {"from": 1950, "to": 2020},
-  "Price":[200000, 500000, 1000000, 2000000, 2500000, 3000000, 4000000, 4500000, 5000000, 10000000]
+  "year": {
+    "from": 1950,
+    "to": 2020
+  },
+  "Price": [
+    200000,
+    500000,
+    1000000,
+    2000000,
+    2500000,
+    3000000,
+    4000000,
+    4500000,
+    5000000,
+    10000000
+  ]
 }
-
