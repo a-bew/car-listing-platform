@@ -49,4 +49,4 @@ function slider(){
 
 }
 
-window.onload =slider; 
+//window.onload =slider; 
