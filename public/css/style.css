@@ -49,15 +49,20 @@ article{
 .align-text-to-left{
   text-align: left;
 }
+
+.margin-to-left{
+	margin: 0px;
+}
 .padding-to-left{
 	padding: 0 0 0 15px;
 }
+
 
 .padding-left-5{
 	padding: 5px;
 }
  .padding-to-30{
- 	padding: 30px 30px 0px 30px;
+ 	padding: 0px 30px 0px 30px;
  }
 .clear-fix{
   clear: both;
@@ -98,9 +103,8 @@ nav .fr{
     margin: 35px 12px 0 0;
 }
 
-
 .contact.top {
-    padding: 10px 0 0 20px;
+    padding: 5px 0 0 20px;
     margin: 5px 12px 0 0;
 }
 
@@ -112,6 +116,11 @@ li a.searches-{  /*for search icon*/
 	margin: 50px 0  0 20px; 
 }
 
+/* sellacar */
+.contact.top-findacar {
+    padding: 0px 0 0 20px;
+    margin: 5px 12px 0 0;
+}
 
 /* Grid */
 .col-1 {width: 8.33%;}
@@ -140,7 +149,7 @@ div{
 
 nav li{
   display: inline;
-  padding:10px 20px 10px 10px;
+  padding:10px;
 
 }
 
@@ -218,6 +227,7 @@ nav .fl{
 	}
 
 
+
 	nav a.set-to-white{
 		color: white;
 		cursor: pointer;
@@ -240,6 +250,15 @@ nav .fl{
 	section .right{
 		width: 100%;
 	}
+
+    /* findacar form */
+	form .top-group{
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: 15px;
+
+	}
+
 }
 
 /* Main */
@@ -247,6 +266,7 @@ article{
 	
 	position: relative;
 }
+
 
 
 section{
@@ -335,7 +355,6 @@ form[name="register"] h2{
     border-radius: 15px;
 }
 
-
 main .btn-primary{
     background-color: chartreuse;
 }
@@ -420,6 +439,7 @@ section.wrapper img{
 	      margin: auto;
       width: 80%;
 	}
+
 	.wrappercreate > *{
 		padding: 2em;
 	}
@@ -622,6 +642,67 @@ form.grid button{
   border: 2px solid #000;
 }
 
+/* Sell a Car */
+
+form.grid-sell{
+    font-size: 1.5em;
+}
+
+form.grid-sell{
+	display: block;
+	width: 80%;
+	margin: auto;
+}
+
+form.grid-sell select{
+	width: 100%;
+	margin: auto;
+	height: 50px;
+}
+
+.grid-sell button{
+  padding: 0.6em;
+  border: 2px solid #000;
+  width: 100%;
+  height: 50px;
+}
+
+.description{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+p.side-by-side{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+form .top-group{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 15px;
+
+}
+
+.border-of-sellacar-form{
+	display: grid;
+	grid-template-columns: 1fr;
+	border: brown 5px solid;
+	border-radius: 15px;
+	backgroud: #333;
+	padding: 30px;
+
+}
+/* Inline */
+.display-inline{
+	display: inline;
+}
+
+.display-block{
+  display: block;
+}
+
 .grid{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -631,7 +712,6 @@ form.grid button{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 }
-
 
 
 /*slider section*/
@@ -687,4 +767,10 @@ form.grid button{
 	border-radius: 100%;
 	transition: 0.4s;
 	cursor: pointer;
+}
+
+
+/*sellacar */
+p.side-by-side select.option-currency-width{
+	width: 50px;
 }

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Car Listing Platform</title>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!-- font-awesome icons -->
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+	<link href="//fonts.googleapis.com/css?family=Alegreya:400,400i,700,700i,900,900i&subset=latin-ext" rel="stylesheet">
+	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+</head>
+<body>
+	<nav id="myTopnav" class="top-nav padding-to-left">
+    <li data-menu="search"><a class="set-to-white moveup" href="/findacar.html"><i class="fa fa-search-plus" aria-hidden="true"></i></a></li>
+    <li data-menu="home" class="contact-findacar moveup top"><a href="#">Contact</a></li>	           
+    <li data-menu="home" class="contact-findacar moveup top"><a href="#">Register</a></li>             
+    <li data-menu="home" class="contact-findacar moveup top"><a href="#">Login</a></li>             
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+	</nav>
+	<div class="clear-fix"></div>
+	     <div class="container">
+          <main name="findacar">
+            <section id="section-findacar">
+              <h1>Sell A Car</h1>
+                <div>
+                  <article>
+                    <form class="grid-sell">
+                        <!-- grouping border div  -->
+                      
+                        <div class="top-group border-of-sellacar-form">                          
+                          <div class="make grid-sell">
+                            <label>Make</label>
+                            <select class="select-make">
+                              <option value="" disabled selected>Please Select</option>
+                            </select> 
+                          </div>
+                          <div class="model">
+                            <label>Model</label>
+                            <select name="model" class="select-model"><option value="" disabled selected>Please Select</option></select>                   
+                          </div>
+                          <div class="make">
+                            <label>Series</label>
+                            <select class="select-make">
+                              <option value="" disabled selected>Please Select</option>
+                            </select> 
+                          </div>
+                          <div class="model">
+                            <label>Year</label>
+                            <select name="model" class="select-model"><option value="" disabled selected>Please Select</option></select>                   
+                          </div>
+                          <div class="make">
+                            <label>Mileage (km) *</label>
+                            <select class="select-make">
+                              <option value="" disabled selected>Please Select</option>
+                            </select> 
+                          </div>
+                          <div class="model">
+                            <label>Body Type *</label>
+                            <select name="model" class="select-model"><option value="" disabled selected>Please Select</option></select>                   
+                          </div>
+                          <div class="make">
+                            <label>Transmission Type *</label>
+                            <select class="select-make">
+                              <option value="" disabled selected>Please Select</option>
+                            </select> 
+                          </div>
+                          <div class="model">
+                            <label>Condition *</label>
+                            <select name="model" class="select-model"><option value="" disabled selected>Please Select</option></select>                   
+                          </div>
+                        
+                          <div class="set-grid-sell">
+                            <div class="make">
+                              <label>Transmission Type *</label>
+                              <p class="side-by-side">
+                                <select class="select-make option-currency-width margin-to-left">
+                                  <option value="N" class="" selected>N</option>
+                                  <option value="USD" >USD</option>
+                                 </select> 
+                                  <input type="text" name="amount-sold" class="margin-to-left">
+                              </p>
+                            </div>
+      
+                            <div>
+                              <p class="side-by-side"><input type="checkbox" name=""><span>Price is negotiable</span></p>
+                            </div>
+                          </div>
+                        </div>
+                     
+                    <!-- Intermission -->
+
+
+                     <!-- <button name="search" >Search</button> -->
+                      <div class="border-of-sellacar-form">
+                        <div class="top-group ">                          
+                          <div class="make grid-sell">
+                            <label>Fuel Type</label>
+                            <select class="select-make">
+                              <option value="" disabled selected>Please Select</option>
+                            </select> 
+                          </div>
+                          <div class="model">
+                            <label>Engine size(cc)</label>
+                            <select name="model" class="select-model"><option value="" disabled selected>Please Select</option></select>                   
+                          </div>
+                          <div class="make grid-sell">
+                            <label>Interior</label>
+                            <select class="select-make">
+                              <option value="" disabled selected>Please Select</option>
+                            </select> 
+                          </div>
+                          <div class="model">
+                            <label>Colour Type</label>
+                            <select name="model" class="select-model"><option value="" disabled selected>Please Select</option></select>                   
+                          </div>
+                        </div>
+                        <!-- Add a Description Box -->
+                        <div class="description">
+                          <label>Description(600/600)</label>
+                          <textarea class=""></textarea>
+                        </div>                        
+                      </div>
+
+                  </form>
+
+                </article>
+              </div>
+   
+            </section>
+          </main>
+        </div>
+      <div class="clear-fix"></div>
+
+    <footer>
+       <p>©2019 Car Listing Platform</p>
+       <p><span class="visit-us">Visit Us:</span>car-listing-platform.heroku.com</p>
+       <p><span class="powered-by">Powered By</span>Decagon</p>
+       <p><span class="hosted"> Designed by:</span>Adetola Bewaji</p>
+       <p><span class="v-c">Version Controlled on:</span> https://www.github.com/a-bew/car-listing-platform</p>
+       <p><span class="hosted-by">Hosted By:</span> Heroku(In view)</p>
+    </footer>
+    <script src='/js/jquery.min.js'></script>
+    <script src='/js/bootstrap.min.js'></script>
+    <script src='/js/global.js'></script>
+    <script src='/js/ajax.js'></script>
+    <script src='/js/sellacar.js'></script>
+
+</body>
