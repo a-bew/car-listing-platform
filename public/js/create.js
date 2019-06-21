@@ -3,7 +3,7 @@ window.onload = utilityFunctionC;
 var userListData = {}
 
 function utilityFunctionC(){
-  populateApp(populateCreateTable, "http://localhost:3000/cars")
+  populateApp(populateCreateTable, "/cars")
   showCreate();
 
   // Linked Edit User button Click
@@ -12,8 +12,6 @@ function utilityFunctionC(){
 
   // Add User button click
   document.querySelector('#btnCreateCar').addEventListener('click', addCar);
-
-
 
 // Get the image and insert it inside the modal - use its "alt" text as a caption
 //  setup();
@@ -130,7 +128,8 @@ function showUserInfoComplete(event){
 //  document.querySelector('#editUser fieldset input#updateUserGender').value = thisUserObject.gender;
 //  document.querySelector('#editUser fieldset button#btnUpdateUser').rel = thisUserObject._id;
     console.log("ididid id", thisUserObject.id)
-  	var content = "";
+
+ 	var content = "";
 	content += '<h2 class="as-margin-bottom">Edit Car Form</h2>'
     content+= '<form name="order" action="#" method="post">'	                
 	content += '<p class="order"><input class="" type="text" id="name-of-car" name="name-of-car" placeholder="Name Of Car" value ="' +thisUserObject.name+'"/></p>'
@@ -201,7 +200,7 @@ function editCar(event){
     http_request.send(data);
 
     (function() { 
-          populateApp(populateCreateTable, "http://localhost:3000/cars")
+          populateApp(populateCreateTable, "/cars")
           showCreate();
         alert('updated!'); })()
 
@@ -222,7 +221,6 @@ function userValidation2(){
 
 
 // Add User
-
 function validateInput(input){
   // using regex to strip and replace white space i.e replace ' ' with '--'
   var re = /\s+/;   //select one or more ' '/space character
@@ -283,7 +281,7 @@ function addCar(event) {
 
     http_request.send(data);
     (function() { 
-          populateApp(populateCreateTable, "http://localhost:3000/cars")
+          populateApp(populateCreateTable, "/cars")
           showCreate();
         alert('created!'); })();
 	 var data = JSON.parse(http_request.responseText);
@@ -305,7 +303,6 @@ function carValidation(){
   return errorCount;
 }
 
-
 // Delete User link click
 $('#createCarList table tbody').on('click', 'td a.linkdeleteuser', deleteCar);
 
@@ -317,7 +314,7 @@ function ajaxFunction(url, callback, httpMethod, data) {
     xhttp.onreadystatechange = function() {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
 	      // Update the table
-          populateApp(populateCreateTable, "http://localhost:3000/cars")
+          populateApp(populateCreateTable, "/cars")
           showCreate();
 
           var jsonParse = JSON.parse(xhttp.responseText);

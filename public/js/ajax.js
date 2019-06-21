@@ -1,5 +1,4 @@
 // DOM Ready =============================================================
-
   
 function httpCrossBrowser(http_request){
   try{

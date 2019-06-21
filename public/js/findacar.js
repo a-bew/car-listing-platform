@@ -4,7 +4,6 @@ function utilityFunctionFindCar(){
  apiData();
 }
 
-
 const optionsElements = function(table) {
 //    console.log("caught", table, selectClassname)
     var optionElem = '';
@@ -113,11 +112,11 @@ const obj =(param, r)=>{
 
 const apiData = ()=>{
     //Populate .select-make
-    populateApp(obj, `http://localhost:3000/make`);    
+    populateApp(obj, `/make`);    
 	// Populate .select-year-from
-    populateApp(obj, `http://localhost:3000/year`);
+    populateApp(obj, `/year`);
 	// Populate .select-price-min
-    populateApp(obj, `http://localhost:3000/Price`);
+    populateApp(obj, `/Price`);
     
 }
 

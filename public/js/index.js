@@ -2,7 +2,7 @@ var userListData = {};
 window.onload = utilityFunction;
 
 function utilityFunction(){
-    populateApp(indexPage, "http://localhost:3000/cars")
+    populateApp(indexPage, "/cars")
 }
 
 
